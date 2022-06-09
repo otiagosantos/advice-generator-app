@@ -93,6 +93,10 @@ body {
     box-shadow: 0px 0px 30px var(--neon-green);
 }
 
+.generate_button img {
+    user-select: none;
+}
+
 .attribution {
     font-size: 11px; text-align: center;
     position: absolute;
