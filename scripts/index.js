@@ -18,8 +18,14 @@ const AdviceGenerator = {
         adviceQuote.innerHTML = slip.advice
     },
     execute: async () => {
+        document.body.style.cursor = "progress";
+        document.querySelector(".generate_button").style.backgroundColor = "#B9ffa8";
+
         let slip = await AdviceGenerator.getSlip();
         AdviceGenerator.renderAdvice(slip);
+
+        document.body.style.cursor = "default";
+        document.querySelector(".generate_button").style.backgroundColor = "var(--neon-green)";
     }
 }
 
